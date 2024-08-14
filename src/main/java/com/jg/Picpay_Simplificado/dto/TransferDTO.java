@@ -1,7 +1,9 @@
 package com.jg.Picpay_Simplificado.dto;
 
-public record TransferRequest(
-        double value,
+import java.math.BigDecimal;
+
+public record TransferDTO(
+        BigDecimal value,
         long payer,
         long payee
 ) {

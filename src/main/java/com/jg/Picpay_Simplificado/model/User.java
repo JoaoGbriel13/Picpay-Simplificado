@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
 import java.util.UUID;
 
 @Entity
@@ -26,5 +27,5 @@ public class User {
     private String email;
     private UserType userType;
     private String password;
-    private Double saldo = 0.0;
+    private BigDecimal saldo = BigDecimal.ZERO;
 }

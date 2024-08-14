@@ -7,7 +7,8 @@ import org.springframework.http.ProblemDetail;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class InsuficentBalanceHandler extends RuntimeException{
+public class InsuficentBalanceHandler extends PicPayHandler{
+    @Override
     public ProblemDetail toProblemDetail(){
         var pd = ProblemDetail.forStatus(HttpStatus.CONFLICT);
         pd.setTitle("Saldo insuficiente");

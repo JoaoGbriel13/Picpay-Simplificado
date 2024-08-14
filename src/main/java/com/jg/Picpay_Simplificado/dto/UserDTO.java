@@ -6,16 +6,18 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.math.BigDecimal;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
 @Setter
-public class UserRequest{
+public class UserDTO {
     private Long id;
     private String name;
     private String email;
     private String document;
     private UserType userType;
     private String password;
-    private Double saldo;
+    private BigDecimal saldo;
 }
